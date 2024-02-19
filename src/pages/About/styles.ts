@@ -19,6 +19,7 @@ export const AboutContainer = styled.div`
   }
   li {
     font-size: 1.6rem;
+    line-height: 30px;
   }
   p {
     margin: 20px 0;
