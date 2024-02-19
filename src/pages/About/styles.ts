@@ -40,3 +40,19 @@ export const ProfileImageContainer = styled.div`
 
   border-radius: 8px;
 `;
+
+export const SocMedia = styled.div`
+  margin-top: 20px;
+
+  display: flex;
+  gap: 20px;
+  img {
+    width: 70px;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+`;

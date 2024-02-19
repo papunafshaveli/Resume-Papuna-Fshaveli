@@ -17,8 +17,8 @@ const Home = () => {
   };
 
   const visitGithub = () => {
-    const linkedinURL = "https://github.com/papunafshaveli";
-    window.open(linkedinURL, "_blank");
+    const githubUrl = "https://github.com/papunafshaveli";
+    window.open(githubUrl, "_blank");
   };
 
   const sendEmail = () => {

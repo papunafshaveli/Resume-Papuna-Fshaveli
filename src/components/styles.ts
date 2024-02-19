@@ -63,4 +63,10 @@ export const StyledNavLink = styled(NavLink)`
   font-size: 1.8rem;
 
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: bisque;
+    text-decoration-thickness: 2px;
+  }
 `;

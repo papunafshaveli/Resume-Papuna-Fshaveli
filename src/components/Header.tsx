@@ -39,9 +39,9 @@ const Header = () => {
             <StyledNavLink to="/">Home</StyledNavLink>
             <StyledNavLink to="/about">About</StyledNavLink>
             <StyledNavLink to="/skills">Skills</StyledNavLink>
+            <StyledNavLink to="/projects">Projects</StyledNavLink>
             <StyledNavLink to="/education">Education</StyledNavLink>
             <StyledNavLink to="/experience">Experience</StyledNavLink>
-            <StyledNavLink to="/projects">Projects</StyledNavLink>
             <StyledNavLink to="/resume">Resume</StyledNavLink>
           </StyledNav>
         </div>

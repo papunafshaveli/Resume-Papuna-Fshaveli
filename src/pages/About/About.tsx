@@ -1,6 +1,29 @@
-import { AboutContainer, Info, ProfileImageContainer } from "./styles";
+import styled from "styled-components";
+import {
+  AboutContainer,
+  Info,
+  ProfileImageContainer,
+  SocMedia,
+} from "./styles";
+import fb from "../../images/fb.png";
+import insta from "../../images/insta.png";
+import yt from "../../images/yt.png";
 
 const About = () => {
+  const visitFB = () => {
+    const fbUrl = "https://www.facebook.com/papunafshaveli1/";
+    window.open(fbUrl, "_blank");
+  };
+
+  const visitInsta = () => {
+    const instaUrl = "https://www.instagram.com/papunart/?hl=en";
+    window.open(instaUrl, "_blank");
+  };
+
+  const visitYT = () => {
+    const ytUrl = "https://www.youtube.com/channel/UC8GUnP1KWNGgMZnKR7dLy-w";
+    window.open(ytUrl, "_blank");
+  };
   return (
     <AboutContainer>
       <Info>
@@ -40,6 +63,11 @@ const About = () => {
         </p>
       </Info>
       <ProfileImageContainer />
+      <SocMedia>
+        <img src={fb} onClick={visitFB} />
+        <img src={insta} onClick={visitInsta} />
+        <img src={yt} onClick={visitYT} />
+      </SocMedia>
     </AboutContainer>
   );
 };
