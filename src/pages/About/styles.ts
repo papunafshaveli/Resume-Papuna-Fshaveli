@@ -15,6 +15,7 @@ export const AboutContainer = styled.div`
   }
   b {
     font-size: 1.8rem;
+    color: beige;
   }
   li {
     font-size: 1.6rem;
@@ -35,7 +36,7 @@ export const ProfileImageContainer = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
 
-  border: 1px solid white;
+  border: 1px solid beige;
 
   border-radius: 8px;
 `;

@@ -30,11 +30,15 @@ export const HeaderContainer = styled.div`
 export const HomeIconWrapper = styled.div`
   width: 40px;
   height: 40px;
+
+  cursor: pointer;
 `;
 
 export const BurgerContainer = styled.div`
   width: 40px;
   height: 40px;
+
+  cursor: pointer;
   @media ${device.tabletS} {
     display: none;
   }
@@ -57,4 +61,6 @@ export const StyledNav = styled.nav`
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-size: 1.8rem;
+
+  cursor: pointer;
 `;
