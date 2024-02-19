@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 import Header from "./Header";
 
@@ -10,8 +10,15 @@ import Experience from "../pages/Experience/Experience";
 import Projects from "../pages/Projects/Projects";
 import Resume from "../pages/Resume/Resume";
 import { AppContainer } from "./styles";
+import { useEffect } from "react";
 
 function App() {
+  const navigateToHome = useNavigate();
+
+  useEffect(() => {
+    navigateToHome("/");
+  }, []);
+
   return (
     <AppContainer>
       <Header />

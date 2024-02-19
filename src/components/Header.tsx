@@ -7,6 +7,7 @@ import { useDimensions } from "../hooks/useDimensions";
 import {
   BurgerContainer,
   HeaderContainer,
+  HomeIconWrapper,
   StyledNav,
   StyledNavLink,
 } from "./styles";
@@ -28,7 +29,9 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <BiHomeSmile size={40} onClick={() => navigate("/")} />
+      <HomeIconWrapper>
+        <BiHomeSmile size={40} onClick={() => navigate("/")} />
+      </HomeIconWrapper>
 
       {navIsVisible && (
         <div>

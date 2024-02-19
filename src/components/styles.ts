@@ -16,11 +16,20 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
 
   background-color: #6a6d70;
-  padding: 10px 30px;
+  padding: 10px 0;
+
+  @media ${device.mobileL} {
+    padding: 10px 30px;
+  }
 
   @media ${device.tabletS} {
     padding: 30px 120px;
   }
+`;
+
+export const HomeIconWrapper = styled.div`
+  width: 40px;
+  height: 40px;
 `;
 
 export const BurgerContainer = styled.div`
