@@ -2,20 +2,22 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../device/device";
 //app
-export const AppContainer = styled.div`
+export const AppContainer = styled.div<{ isDarkMode: boolean }>`
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: ${(props) => (props.isDarkMode ? "rgb(18, 18, 18);" : "#CFCBCA")};
 `;
 //Header
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div<{ themes: boolean }>`
   width: 100%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background-color: #6a6d70;
+  background-color: ${(props) => (props.themes ? "#6a6d70" : "#F5EBE8")};
   padding: 10px 0;
 
   @media ${device.mobileL} {
@@ -58,9 +60,10 @@ export const StyledNav = styled.nav`
   }
 `;
 
-export const StyledNavLink = styled(NavLink)`
+export const StyledNavLink = styled(NavLink)<{ themes: boolean }>`
   text-decoration: none;
   font-size: 1.8rem;
+  color: ${(props) => (props.themes ? "white" : "black")};
 
   cursor: pointer;
 

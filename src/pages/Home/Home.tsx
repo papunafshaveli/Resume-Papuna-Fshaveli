@@ -8,6 +8,8 @@ import {
   IntroAnimation,
   Introduction,
 } from "./styles";
+import { useContext } from "react";
+import { ThemesContext } from "../../components/App";
 
 const Home = () => {
   const visitLinkedin = () => {
@@ -24,9 +26,10 @@ const Home = () => {
   const sendEmail = () => {
     window.location.href = "mailto:papunafshaveli@gmail.com";
   };
+  const themes = useContext(ThemesContext);
   return (
     <HomePageContainer>
-      <Introduction>My Name is Papuna Fshaveli</Introduction>
+      <Introduction themes={themes}>My Name is Papuna Fshaveli</Introduction>
       <IntroAnimation>
         <TypeAnimation
           sequence={[
@@ -38,7 +41,11 @@ const Home = () => {
           ]}
           wrapper="span"
           speed={50}
-          style={{ fontSize: "3rem", display: "inline-block" }}
+          style={{
+            fontSize: "3rem",
+            display: "inline-block",
+            color: "GrayText",
+          }}
           repeat={Infinity}
         />
       </IntroAnimation>
