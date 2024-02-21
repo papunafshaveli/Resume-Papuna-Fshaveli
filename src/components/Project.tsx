@@ -3,6 +3,10 @@ import shopImg from "../images/shop.png";
 import todoImg from "../images/todo.png";
 import travelImg from "../images/travel.png";
 import worldImg from "../images/world.png";
+
+import react from "../images/react.png";
+import ts from "../images/ts.png";
+
 import {
   Buttons,
   ProjectContainer,
@@ -20,27 +24,27 @@ const projectsData = [
       "This React-based web application enables users to explore information about countries. You can search for specific countries, view details, and filter them based on regions.",
     github: "https://github.com/papunafshaveli/Countries",
     liveLink: "https://countries-delta-puce.vercel.app/",
-    languages: ["TypeScript", "React"],
+    languages: [react, ts],
   },
   {
     id: 2,
     img: shopImg,
-    head: "Where in the World?",
+    head: "Courses Store",
     description:
-      "This React-based web application enables users to explore information about countries. You can search for specific countries, view details, and filter them based on regions.",
-    github: "https://github.com/papunafshaveli/Countries",
-    liveLink: "https://countries-delta-puce.vercel.app/",
-    languages: ["TypeScript", "React"],
+      "This React application allows users to explore various courses, view detailed information about each course, and switch between different currencies for pricing.",
+    github: "https://github.com/papunafshaveli/Courses-store",
+    liveLink: "https://courses-store-eta.vercel.app/",
+    languages: [react, ts],
   },
   {
     id: 3,
     img: todoImg,
-    head: "Where in the World?",
+    head: "Todo Application",
     description:
-      "This React-based web application enables users to explore information about countries. You can search for specific countries, view details, and filter them based on regions.",
-    github: "https://github.com/papunafshaveli/Countries",
-    liveLink: "https://countries-delta-puce.vercel.app/",
-    languages: ["TypeScript", "React"],
+      "A simple React-based Todo application with local storage support.",
+    github: "https://github.com/papunafshaveli/Todo-Application",
+    liveLink: "https://todo-application-delta.vercel.app/",
+    languages: [react, ts],
   },
   {
     id: 4,
@@ -50,17 +54,17 @@ const projectsData = [
       "This React-based web application enables users to explore information about countries. You can search for specific countries, view details, and filter them based on regions.",
     github: "https://github.com/papunafshaveli/Countries",
     liveLink: "https://countries-delta-puce.vercel.app/",
-    languages: ["TypeScript", "React"],
+    languages: [react, ts],
   },
   {
     id: 5,
     img: travelImg,
-    head: "Where in the World?",
+    head: "WorldWise",
     description:
-      "This React-based web application enables users to explore information about countries. You can search for specific countries, view details, and filter them based on regions.",
-    github: "https://github.com/papunafshaveli/Countries",
-    liveLink: "https://countries-delta-puce.vercel.app/",
-    languages: ["TypeScript", "React"],
+      "The web app is a travel tracking and adventure registration application.",
+    github: "https://github.com/papunafshaveli/WorldWise",
+    liveLink: "https://world-wise-seven.vercel.app/",
+    languages: [react, ts],
   },
 ];
 
@@ -94,10 +98,10 @@ const Project = () => {
           </StyledMain>
           <StyledFooter>
             <div>
-              <b>{item.languages[0]}</b>
+              <img src={item.languages[0]}></img>
             </div>
             <div>
-              <b>{item.languages[1]}</b>
+              <img src={item.languages[1]}></img>
             </div>
           </StyledFooter>
         </ProjectContainer>

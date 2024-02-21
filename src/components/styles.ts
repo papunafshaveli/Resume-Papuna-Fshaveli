@@ -137,9 +137,15 @@ export const Buttons = styled.div`
 export const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-around;
+  align-items: center;
+
   background-color: black;
 
   margin: 0 10px;
 
-  font-size: 1.4rem;
+  border-radius: 5px;
+
+  img {
+    width: 40px;
+  }
 `;
