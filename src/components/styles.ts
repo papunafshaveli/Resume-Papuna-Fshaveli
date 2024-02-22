@@ -73,6 +73,10 @@ export const StyledNavLink = styled(NavLink)<{ themes: boolean }>`
   font-size: 1.8rem;
   color: ${(props) => (props.themes ? "white" : "black")};
 
+  &:focus {
+    text-decoration: underline;
+  }
+
   cursor: pointer;
 
   &:hover {
@@ -82,7 +86,7 @@ export const StyledNavLink = styled(NavLink)<{ themes: boolean }>`
   }
 `;
 
-// Projects
+// Project
 
 export const ProjectContainer = styled.div`
   display: flex;
@@ -120,6 +124,9 @@ export const StyledMain = styled.main`
   align-items: center;
   padding: 0 10px;
   gap: 15px;
+  h1 {
+    text-align: center;
+  }
   p {
     text-align: center;
     font-size: 1.4rem;

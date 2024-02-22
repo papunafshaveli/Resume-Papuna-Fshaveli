@@ -3,6 +3,7 @@ import shopImg from "../images/shop.png";
 import todoImg from "../images/todo.png";
 import travelImg from "../images/travel.png";
 import worldImg from "../images/world.png";
+import resume from "../images/resume.png";
 
 import react from "../images/react.png";
 import ts from "../images/ts.png";
@@ -64,6 +65,16 @@ const projectsData = [
       "The web app is a travel tracking and adventure registration application.",
     github: "https://github.com/papunafshaveli/WorldWise",
     liveLink: "https://world-wise-seven.vercel.app/",
+    languages: [react, ts],
+  },
+  {
+    id: 6,
+    img: resume,
+    head: "A minimal portfolio template",
+    description:
+      "Professional way to showcase your work Increases your visibility and online presence better chance of getting work opportunity.",
+    github: "https://github.com/papunafshaveli/Resume-Papuna-Fshaveli",
+    liveLink: "https://resume-papuna-fshaveli.vercel.app/",
     languages: [react, ts],
   },
 ];
