@@ -5,6 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
+
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 import { BiHomeSmile } from "react-icons/bi";
@@ -12,7 +13,9 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { FcNightPortrait } from "react-icons/fc";
 import { BiSolidHomeHeart } from "react-icons/bi";
 
-import { useDimensions } from "../hooks/useDimensions";
+import { useDimensions } from "../../hooks/useDimensions";
+
+import { ThemesContext } from "../App/App";
 import {
   BurgerContainer,
   HeaderContainer,
@@ -20,7 +23,6 @@ import {
   StyledNav,
   StyledNavLink,
 } from "./styles";
-import { ThemesContext } from "./App";
 
 const Header = ({
   isDarkMode,

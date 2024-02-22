@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import Project from "../../components/Project";
+import Project from "../../components/Project/Project";
 import { MainText, ProjectWrapper, ProjectsPageContainer } from "./styles";
-import { ThemesContext } from "../../components/App";
+import { ThemesContext } from "../../components/App/App";
 
 const Projects = () => {
   const themes = useContext(ThemesContext);

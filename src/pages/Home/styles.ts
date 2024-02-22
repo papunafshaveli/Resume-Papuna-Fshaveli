@@ -14,6 +14,7 @@ export const HomePageContainer = styled(motion.div)`
 export const Introduction = styled.h1<{ themes: boolean }>`
   color: ${(props) => (props.themes ? "white" : "black")};
   font-size: 3.4rem;
+
   text-align: center;
 `;
 

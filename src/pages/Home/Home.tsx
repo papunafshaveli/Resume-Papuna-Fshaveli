@@ -9,7 +9,7 @@ import {
   Introduction,
 } from "./styles";
 import { useContext } from "react";
-import { ThemesContext } from "../../components/App";
+import { ThemesContext } from "../../components/App/App";
 
 const Home = () => {
   const visitLinkedin = () => {

@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
-import Header from "./Header";
+import Header from "../Header/Header";
 
 import { AppContainer } from "./styles";
 import { createContext, useEffect, useState } from "react";
-import AnimatedRoutes from "./AnimatedRoutes";
+import AnimatedRoutes from "../AnimatedRoutes/AnimatedRoutes";
 
 export const ThemesContext = createContext(false);
 

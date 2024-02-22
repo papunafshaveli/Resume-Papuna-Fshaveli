@@ -14,7 +14,7 @@ import {
   Tools,
 } from "./styles";
 import { useContext } from "react";
-import { ThemesContext } from "../../components/App";
+import { ThemesContext } from "../../components/App/App";
 
 const Skills = () => {
   const themes = useContext(ThemesContext);

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import profileImage from "../../images/profile.png";
 import { motion } from "framer-motion";
 
@@ -6,6 +7,7 @@ export const AboutContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   padding: 70px 30px;
   max-width: 800px;
 `;
@@ -50,6 +52,7 @@ export const SocMedia = styled.div`
 
   display: flex;
   gap: 20px;
+
   img {
     width: 70px;
 

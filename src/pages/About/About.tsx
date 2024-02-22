@@ -4,11 +4,13 @@ import {
   ProfileImageContainer,
   SocMedia,
 } from "./styles";
+
 import fb from "../../images/fb.png";
 import insta from "../../images/insta.png";
 import yt from "../../images/yt.png";
 import { useContext } from "react";
-import { ThemesContext } from "../../components/App";
+
+import { ThemesContext } from "../../components/App/App";
 
 const About = () => {
   const visitFB = () => {
