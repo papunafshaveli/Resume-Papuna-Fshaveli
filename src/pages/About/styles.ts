@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import profileImage from "../../images/profile.png";
+import { motion } from "framer-motion";
 
-export const AboutContainer = styled.div`
+export const AboutContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;

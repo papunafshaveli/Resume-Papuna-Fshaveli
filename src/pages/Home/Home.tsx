@@ -28,7 +28,11 @@ const Home = () => {
   };
   const themes = useContext(ThemesContext);
   return (
-    <HomePageContainer>
+    <HomePageContainer
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
+    >
       <Introduction themes={themes}>My Name is Papuna Fshaveli</Introduction>
       <IntroAnimation>
         <TypeAnimation

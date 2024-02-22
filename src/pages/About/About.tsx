@@ -24,7 +24,11 @@ const About = () => {
     window.open(ytUrl, "_blank");
   };
   return (
-    <AboutContainer>
+    <AboutContainer
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
+    >
       <Info>
         <ul>
           <li>

@@ -7,7 +7,9 @@ export const AppContainer = styled.div<{ isDarkMode: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: ${(props) => (props.isDarkMode ? "rgb(18, 18, 18);" : "#CFCBCA")};
+  background-color: ${(props) =>
+    props.isDarkMode ? "rgb(18, 18, 18);" : "#CFCBCA"};
+  transition: background-color 0.5s ease;
 `;
 //Header
 export const HeaderContainer = styled.div<{ themes: boolean }>`
@@ -17,7 +19,7 @@ export const HeaderContainer = styled.div<{ themes: boolean }>`
   align-items: center;
   justify-content: space-between;
 
-  background-color: ${(props) => (props.themes ? "#6a6d70" : "#F5EBE8")};
+  background-color: ${(props) => (props.themes ? "#6a6d70" : "#839192")};
   padding: 10px 0;
 
   @media ${device.mobileL} {
@@ -93,6 +95,8 @@ export const ProjectContainer = styled.div`
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   background-color: #202225;
+
+  position: relative;
 `;
 
 export const StyledHeader = styled.header`
@@ -144,9 +148,10 @@ export const StyledFooter = styled.footer`
 
   background-color: black;
 
-  margin: 0 10px;
-
   border-radius: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 
   img {
     width: 40px;

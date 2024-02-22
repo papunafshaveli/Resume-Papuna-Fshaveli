@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const HomePageContainer = styled.div`
+export const HomePageContainer = styled(motion.div)`
   min-height: 100vh;
 
   display: flex;

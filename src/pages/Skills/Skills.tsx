@@ -16,7 +16,11 @@ import {
 
 const Skills = () => {
   return (
-    <SkillsContainer>
+    <SkillsContainer
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
+    >
       <Description>
         I love to learn new things and experiment with new technologies. These
         are some of the major languages, technologies, tools and platforms I
