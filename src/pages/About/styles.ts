@@ -8,7 +8,9 @@ export const AboutContainer = styled(motion.div)`
   align-items: center;
   padding: 70px 30px;
   max-width: 800px;
+`;
 
+export const Info = styled.div<{ themes: boolean }>`
   ul {
     list-style-type: none;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -16,19 +18,19 @@ export const AboutContainer = styled(motion.div)`
   }
   b {
     font-size: 1.8rem;
-    color: beige;
+    color: ${(props) => (props.themes ? "beige" : "black")};
   }
   li {
     font-size: 1.6rem;
     line-height: 30px;
+    color: ${(props) => (props.themes ? "white" : "black")};
   }
   p {
     margin: 20px 0;
     font-size: 1.4rem;
+    color: ${(props) => (props.themes ? "white" : "black")};
   }
 `;
-
-export const Info = styled.div``;
 
 export const ProfileImageContainer = styled.div`
   width: 300px;

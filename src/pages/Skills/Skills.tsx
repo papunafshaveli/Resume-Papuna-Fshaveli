@@ -13,15 +13,18 @@ import {
   SkillsContainer,
   Tools,
 } from "./styles";
+import { useContext } from "react";
+import { ThemesContext } from "../../components/App";
 
 const Skills = () => {
+  const themes = useContext(ThemesContext);
   return (
     <SkillsContainer
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
-      <Description>
+      <Description themes={themes}>
         I love to learn new things and experiment with new technologies. These
         are some of the major languages, technologies, tools and platforms I
         have worked with:

@@ -7,6 +7,8 @@ import {
 import fb from "../../images/fb.png";
 import insta from "../../images/insta.png";
 import yt from "../../images/yt.png";
+import { useContext } from "react";
+import { ThemesContext } from "../../components/App";
 
 const About = () => {
   const visitFB = () => {
@@ -23,13 +25,16 @@ const About = () => {
     const ytUrl = "https://www.youtube.com/channel/UC8GUnP1KWNGgMZnKR7dLy-w";
     window.open(ytUrl, "_blank");
   };
+
+  const themes = useContext(ThemesContext);
+
   return (
     <AboutContainer
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
-      <Info>
+      <Info themes={themes}>
         <ul>
           <li>
             <b>Name:</b> Papuna Fshaveli;

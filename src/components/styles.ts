@@ -20,7 +20,7 @@ export const HeaderContainer = styled.div<{ themes: boolean }>`
   justify-content: space-between;
 
   background-color: ${(props) => (props.themes ? "#6a6d70" : "#839192")};
-  padding: 10px 0;
+  padding: 10px 5px;
 
   @media ${device.mobileL} {
     padding: 10px 30px;
@@ -34,8 +34,12 @@ export const HeaderContainer = styled.div<{ themes: boolean }>`
 export const HomeIconWrapper = styled.div`
   width: 40px;
   height: 40px;
-
+  display: none;
   cursor: pointer;
+
+  @media ${device.tabletS} {
+    display: block;
+  }
 `;
 
 export const BurgerContainer = styled.div`
@@ -53,7 +57,7 @@ export const StyledNav = styled.nav`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 10px;
+  gap: 15px;
 
   @media ${device.tabletS} {
     display: flex;
@@ -64,6 +68,8 @@ export const StyledNav = styled.nav`
 
 export const StyledNavLink = styled(NavLink)<{ themes: boolean }>`
   text-decoration: none;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 1px;
   font-size: 1.8rem;
   color: ${(props) => (props.themes ? "white" : "black")};
 

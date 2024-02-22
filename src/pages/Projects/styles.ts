@@ -10,9 +10,10 @@ export const ProjectsPageContainer = styled(motion.div)`
   padding-bottom: 70px;
 `;
 
-export const MainText = styled.h1`
+export const MainText = styled.h1<{ themes: boolean }>`
   font-size: 2.8rem;
   padding: 60px;
+  color: ${(props) => (props.themes ? "white" : "black")};
 `;
 
 export const ProjectWrapper = styled.div`
