@@ -4,13 +4,16 @@ import {
   ProfileImageContainer,
   SocMedia,
 } from "./styles";
-
+import profilePic from "../../images/profile.png";
 import fb from "../../images/fb.png";
 import insta from "../../images/insta.png";
 import yt from "../../images/yt.png";
 import { useContext } from "react";
 
 import { ThemesContext } from "../../components/App/App";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const About = () => {
   const visitFB = () => {
@@ -36,7 +39,7 @@ const About = () => {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
-      <Info themes={themes}>
+      <Info $themes={themes}>
         <ul>
           <li>
             <b>Name:</b> Papuna Fshaveli;
@@ -72,11 +75,45 @@ const About = () => {
           ever-evolving passion.
         </p>
       </Info>
-      <ProfileImageContainer />
+      <ProfileImageContainer>
+        <LazyLoadImage
+          src={profilePic}
+          width="100%"
+          effect="blur"
+          delayMethod="debounce"
+          delayTime={300}
+        />
+      </ProfileImageContainer>
       <SocMedia>
-        <img src={fb} onClick={visitFB} />
-        <img src={insta} onClick={visitInsta} />
-        <img src={yt} onClick={visitYT} />
+        <LazyLoadImage
+          src={fb}
+          width="100%"
+          height="70px"
+          effect="blur"
+          delayMethod="debounce"
+          delayTime={300}
+          onClick={visitFB}
+        />
+
+        <LazyLoadImage
+          src={insta}
+          width="100%"
+          height="70px"
+          effect="blur"
+          delayMethod="debounce"
+          delayTime={300}
+          onClick={visitInsta}
+        />
+
+        <LazyLoadImage
+          src={yt}
+          width="100%"
+          height="70px"
+          effect="blur"
+          delayMethod="debounce"
+          delayTime={300}
+          onClick={visitYT}
+        />
       </SocMedia>
     </AboutContainer>
   );

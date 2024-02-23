@@ -19,12 +19,15 @@ export const ProjectContainer = styled.div`
   background-color: #202225;
 
   position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const StyledHeader = styled.header`
   img {
     width: 100%;
-    height: 250px;
 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;

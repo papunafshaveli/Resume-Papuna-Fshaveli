@@ -33,7 +33,7 @@ const Home = () => {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
-      <Introduction themes={themes}>My Name is Papuna Fshaveli</Introduction>
+      <Introduction $themes={themes}>My Name is Papuna Fshaveli</Introduction>
       <IntroAnimation>
         <TypeAnimation
           sequence={[

@@ -7,13 +7,23 @@ import {
   StyledMain,
 } from "./styles";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 const Project = () => {
   return (
     <>
       {projectsData.map((item) => (
         <ProjectContainer key={item.id}>
           <StyledHeader>
-            <img src={item.img} />
+            <LazyLoadImage
+              src={item.img}
+              width="100%"
+              height="250px"
+              effect="blur"
+              delayMethod="debounce"
+              delayTime={100}
+            />
           </StyledHeader>
           <StyledMain>
             <h1>{item.head}</h1>

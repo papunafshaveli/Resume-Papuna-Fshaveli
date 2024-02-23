@@ -19,7 +19,7 @@ function App() {
 
   return (
     <ThemesContext.Provider value={isDarkMode}>
-      <AppContainer isDarkMode={isDarkMode}>
+      <AppContainer $isDarkMode={isDarkMode}>
         <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 
         <AnimatedRoutes />

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 //app
-export const AppContainer = styled.div<{ isDarkMode: boolean }>`
+export const AppContainer = styled.div<{ $isDarkMode: boolean }>`
   min-height: 100vh;
 
   display: flex;
@@ -9,6 +9,6 @@ export const AppContainer = styled.div<{ isDarkMode: boolean }>`
   align-items: center;
 
   background-color: ${(props) =>
-    props.isDarkMode ? "rgb(18, 18, 18);" : "#CFCBCA"};
+    props.$isDarkMode ? "rgb(18, 18, 18);" : "#CFCBCA"};
   transition: background-color 0.5s ease;
 `;

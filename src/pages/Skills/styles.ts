@@ -16,11 +16,11 @@ export const SkillsContainer = styled(motion.div)`
   }
 `;
 
-export const Description = styled.h3<{ themes: boolean }>`
+export const Description = styled.h3<{ $themes: boolean }>`
   text-align: center;
   font-size: 1.8rem;
 
-  color: ${(props) => (props.themes ? "white" : "black")};
+  color: ${(props) => (props.$themes ? "white" : "black")};
 `;
 
 export const Languages = styled.div``;

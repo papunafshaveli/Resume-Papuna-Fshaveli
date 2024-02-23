@@ -11,7 +11,7 @@ const Projects = () => {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
-      <MainText themes={themes}>Projects</MainText>
+      <MainText $themes={themes}>Projects</MainText>
       <ProjectWrapper>
         <Project />
       </ProjectWrapper>

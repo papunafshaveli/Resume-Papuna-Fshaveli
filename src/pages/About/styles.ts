@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import profileImage from "../../images/profile.png";
 import { motion } from "framer-motion";
 
 export const AboutContainer = styled(motion.div)`
@@ -12,7 +11,7 @@ export const AboutContainer = styled(motion.div)`
   max-width: 800px;
 `;
 
-export const Info = styled.div<{ themes: boolean }>`
+export const Info = styled.div<{ $themes: boolean }>`
   ul {
     list-style-type: none;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -20,17 +19,17 @@ export const Info = styled.div<{ themes: boolean }>`
   }
   b {
     font-size: 1.8rem;
-    color: ${(props) => (props.themes ? "beige" : "black")};
+    color: ${(props) => (props.$themes ? "beige" : "black")};
   }
   li {
     font-size: 1.6rem;
     line-height: 30px;
-    color: ${(props) => (props.themes ? "white" : "black")};
+    color: ${(props) => (props.$themes ? "white" : "black")};
   }
   p {
     margin: 20px 0;
     font-size: 1.4rem;
-    color: ${(props) => (props.themes ? "white" : "black")};
+    color: ${(props) => (props.$themes ? "white" : "black")};
   }
 `;
 
@@ -38,13 +37,7 @@ export const ProfileImageContainer = styled.div`
   width: 300px;
   height: 300px;
 
-  background-image: url(${profileImage});
-  background-size: contain;
-  background-repeat: no-repeat;
-
   border: 1px solid beige;
-
-  border-radius: 8px;
 `;
 
 export const SocMedia = styled.div`
@@ -54,8 +47,6 @@ export const SocMedia = styled.div`
   gap: 20px;
 
   img {
-    width: 70px;
-
     cursor: pointer;
 
     &:hover {

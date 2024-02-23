@@ -48,7 +48,7 @@ const Header = ({
   const themes = useContext(ThemesContext);
 
   return (
-    <HeaderContainer themes={themes}>
+    <HeaderContainer $themes={themes}>
       <HomeIconWrapper>
         {themes ? (
           <BiHomeSmile size={40} onClick={() => navigate("/")} />
@@ -64,19 +64,19 @@ const Header = ({
       {navIsVisible && (
         <div>
           <StyledNav>
-            <StyledNavLink themes={themes} to="/">
+            <StyledNavLink $themes={themes} to="/">
               Home
             </StyledNavLink>
-            <StyledNavLink themes={themes} to="/about">
+            <StyledNavLink $themes={themes} to="/about">
               About
             </StyledNavLink>
-            <StyledNavLink themes={themes} to="/skills">
+            <StyledNavLink $themes={themes} to="/skills">
               Skills
             </StyledNavLink>
-            <StyledNavLink themes={themes} to="/projects">
+            <StyledNavLink $themes={themes} to="/projects">
               Projects
             </StyledNavLink>
-            <StyledNavLink themes={themes} to="/resume">
+            <StyledNavLink $themes={themes} to="/resume">
               Resume
             </StyledNavLink>
             {themes ? (
