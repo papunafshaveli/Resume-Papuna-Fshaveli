@@ -54,7 +54,7 @@ const Header = ({
           <BiHomeSmile size={40} onClick={() => navigate("/")} />
         ) : (
           <BiSolidHomeHeart
-            color="black"
+            style={{ fill: "black" }}
             size={40}
             onClick={() => navigate("/")}
           />

@@ -61,6 +61,7 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledNavLink = styled(NavLink)<{ $themes: boolean }>`
+  -webkit-text-stroke: 1px black;
   text-decoration: none;
   font-family: "Russo One", sans-serif;
   letter-spacing: 1px;
@@ -68,15 +69,34 @@ export const StyledNavLink = styled(NavLink)<{ $themes: boolean }>`
 
   color: ${(props) => (props.$themes ? "white" : "black")};
 
-  &:focus {
-    text-decoration: underline;
-  }
-
   cursor: pointer;
 
   &:hover {
-    text-decoration: underline;
-    text-decoration-color: bisque;
-    text-decoration-thickness: 2px;
+    animation: wiggle 3s linear infinite;
+    @keyframes wiggle {
+      0%,
+      7% {
+        transform: rotateZ(0);
+      }
+      15% {
+        transform: rotateZ(-15deg);
+      }
+      20% {
+        transform: rotateZ(10deg);
+      }
+      25% {
+        transform: rotateZ(-10deg);
+      }
+      30% {
+        transform: rotateZ(6deg);
+      }
+      35% {
+        transform: rotateZ(-4deg);
+      }
+      40%,
+      100% {
+        transform: rotateZ(0);
+      }
+    }
   }
 `;

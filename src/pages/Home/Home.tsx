@@ -57,14 +57,18 @@ const Home = () => {
         <FaLinkedin
           size={50}
           onClick={visitLinkedin}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", fill: "GrayText" }}
         />
         <FaGithub
           size={50}
           onClick={visitGithub}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", fill: "GrayText" }}
         />
-        <CiMail size={50} onClick={sendEmail} style={{ cursor: "pointer" }} />
+        <CiMail
+          size={50}
+          onClick={sendEmail}
+          style={{ cursor: "pointer", fill: "GrayText" }}
+        />
       </Contact>
     </HomePageContainer>
   );
