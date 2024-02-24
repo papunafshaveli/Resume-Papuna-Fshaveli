@@ -6,6 +6,7 @@ import Projects from "../../pages/Projects/Projects";
 import Resume from "../../pages/Resume/Resume";
 
 import { AnimatePresence } from "framer-motion";
+import Github from "../../pages/Github/Github";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -17,6 +18,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/github" element={<Github />} />
         <Route path="/resume" element={<Resume />} />
       </Routes>
     </AnimatePresence>

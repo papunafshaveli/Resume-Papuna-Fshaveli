@@ -23,16 +23,10 @@ export const HeaderContainer = styled.div<{ $themes: boolean }>`
 `;
 
 export const HomeIconWrapper = styled.div`
-  width: 40px;
-  height: 40px;
-
-  display: none;
-
   cursor: pointer;
-
-  @media ${device.tabletS} {
-    display: block;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const BurgerContainer = styled.div`

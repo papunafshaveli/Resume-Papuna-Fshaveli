@@ -23,6 +23,7 @@ import {
   StyledNav,
   StyledNavLink,
 } from "./styles";
+import styled from "styled-components";
 
 const Header = ({
   isDarkMode,
@@ -49,23 +50,41 @@ const Header = ({
 
   return (
     <HeaderContainer $themes={themes}>
-      <HomeIconWrapper>
+      <ThemeChangerContainer>
         {themes ? (
-          <BiHomeSmile size={40} onClick={() => navigate("/")} />
-        ) : (
-          <BiSolidHomeHeart
-            style={{ fill: "black" }}
+          <MdOutlineLightMode
             size={40}
-            onClick={() => navigate("/")}
+            onClick={() => {
+              setIsDarkMode(!isDarkMode);
+            }}
+          />
+        ) : (
+          <FcNightPortrait
+            size={40}
+            onClick={() => {
+              setIsDarkMode(!isDarkMode);
+            }}
           />
         )}
-      </HomeIconWrapper>
+      </ThemeChangerContainer>
 
       {navIsVisible && (
         <div>
           <StyledNav>
             <StyledNavLink $themes={themes} to="/">
-              Home
+              {
+                <HomeIconWrapper>
+                  {themes ? (
+                    <BiHomeSmile size={30} onClick={() => navigate("/")} />
+                  ) : (
+                    <BiSolidHomeHeart
+                      style={{ fill: "black" }}
+                      size={30}
+                      onClick={() => navigate("/")}
+                    />
+                  )}
+                </HomeIconWrapper>
+              }
             </StyledNavLink>
             <StyledNavLink $themes={themes} to="/about">
               About
@@ -76,24 +95,12 @@ const Header = ({
             <StyledNavLink $themes={themes} to="/projects">
               Projects
             </StyledNavLink>
+            <StyledNavLink $themes={themes} to="/github">
+              Github
+            </StyledNavLink>
             <StyledNavLink $themes={themes} to="/resume">
               Resume
             </StyledNavLink>
-            {themes ? (
-              <MdOutlineLightMode
-                size={40}
-                onClick={() => {
-                  setIsDarkMode(!isDarkMode);
-                }}
-              />
-            ) : (
-              <FcNightPortrait
-                size={40}
-                onClick={() => {
-                  setIsDarkMode(!isDarkMode);
-                }}
-              />
-            )}
           </StyledNav>
         </div>
       )}
@@ -108,3 +115,5 @@ const Header = ({
 };
 
 export default Header;
+
+const ThemeChangerContainer = styled.div``;
