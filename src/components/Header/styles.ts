@@ -65,6 +65,10 @@ export const StyledNavLink = styled(NavLink)<{ $themes: boolean }>`
 
   cursor: pointer;
 
+  @media ${device.tabletS} {
+    font-size: 2.4rem;
+  }
+
   &:hover {
     animation: wiggle 3s linear infinite;
     @keyframes wiggle {

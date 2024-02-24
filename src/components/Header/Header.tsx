@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 
-import { RxHamburgerMenu } from "react-icons/rx";
+import { PiListFill } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 import { BiHomeSmile } from "react-icons/bi";
 import { MdOutlineLightMode } from "react-icons/md";
@@ -107,7 +107,7 @@ const Header = ({
 
       {burgerIsVisible && (
         <BurgerContainer onClick={() => setNavIsVisible(!navIsVisible)}>
-          <RxHamburgerMenu size={40} />
+          <PiListFill size={40} />
         </BurgerContainer>
       )}
     </HeaderContainer>
