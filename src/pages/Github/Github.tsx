@@ -15,8 +15,6 @@ const Github: React.FC<RepositoryTypes> = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  console.log(data.viewer.repositories.nodes);
-
   return (
     <GithubContainer>
       <h2>My Repositories</h2>
