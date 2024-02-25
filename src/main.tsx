@@ -19,12 +19,12 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem(MY_GITHUB_ACCESS_TOKEN);
-
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : "",
+      authorization: MY_GITHUB_ACCESS_TOKEN
+        ? `Bearer ${MY_GITHUB_ACCESS_TOKEN}`
+        : "",
     },
   };
 });
@@ -34,6 +34,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+console.log(client);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
