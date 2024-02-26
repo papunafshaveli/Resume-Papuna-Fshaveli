@@ -12,7 +12,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 
-const MY_GITHUB_ACCESS_TOKEN = import.meta.env.VITE_GITHUB_ACCESS_TOKEN;
+const VITE_MY_GITHUB_ACCESS_TOKEN = "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";
 
 const httpLink = createHttpLink({
   uri: "https://api.github.com/graphql",
@@ -22,8 +22,8 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: MY_GITHUB_ACCESS_TOKEN
-        ? `Bearer ${MY_GITHUB_ACCESS_TOKEN}`
+      authorization: VITE_MY_GITHUB_ACCESS_TOKEN
+        ? `Bearer ${VITE_MY_GITHUB_ACCESS_TOKEN}`
         : "",
     },
   };
@@ -34,13 +34,12 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-console.log(client);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
         <App />
-      </ApolloProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ApolloProvider>
   </React.StrictMode>
 );
