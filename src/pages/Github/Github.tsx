@@ -9,7 +9,7 @@ type RepositoryTypes = {
   url: string;
 };
 
-const Github: React.FC<RepositoryTypes> = () => {
+const Github = () => {
   const { loading, error, data } = useQuery(GET_REPOSITORIES);
 
   if (loading) return <p>Loading...</p>;
