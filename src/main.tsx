@@ -12,7 +12,9 @@ import {
   createHttpLink,
 } from "@apollo/client";
 
-const VITE_MY_GITHUB_ACCESS_TOKEN = "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";
+const VITE_MY_GITHUB_ACCESS_TOKEN = import.meta.env.VITE_GITHUB_ACCESS_TOKEN;
+
+console.log(VITE_MY_GITHUB_ACCESS_TOKEN);
 
 const httpLink = createHttpLink({
   uri: "https://api.github.com/graphql",
